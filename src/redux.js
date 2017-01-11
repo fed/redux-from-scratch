@@ -39,3 +39,16 @@ export function combineReducers (reducers) {
       }, {});
   };
 }
+
+export function bindActionCreators(actionCreators, dispatch) {
+  const keys = Object.keys(actionCreators);
+  const boundActionCreators = {};
+
+  keys.forEach((key, index) => {
+    const actionCreator = actionCreators[key];
+
+    boundActionCreators[key] = (...args) => dispatch(actionCreator(...args));
+  });
+
+  return boundActionCreators;
+}

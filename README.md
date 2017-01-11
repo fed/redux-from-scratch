@@ -20,4 +20,5 @@ Most of the above concepts are not unique to Redux, but Redux implements them in
 |---------|-------------|
 | `yarn install` | Fetch dependencies and build binaries for any of the modules |
 | `yarn start` | Fire up Webpack Dev Server, app will go live on `http://localhost:3000` |
+| `yarn run build` | Create a production build |
 | `yarn test` | Run test suite |

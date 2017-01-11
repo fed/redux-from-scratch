@@ -1,0 +1,38 @@
+.Counter {
+  text-align: center;
+}
+
+.Counter-count {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.Counter-increment,
+.Counter-decrement {
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 15px;
+}
+
+.Counter-increment {
+  background-color: #7cbb00;
+  margin-right: 10px;
+}
+
+.Counter-decrement {
+  background-color: #f65314;
+}
+
+.Counter-by {
+  border: 1px solid #ebebeb;
+  display: block;
+  margin: 20px auto;
+  padding: 20px;
+  width: 400px;
+}
+
+.Counter-input {
+  margin-left: 10px;
+}

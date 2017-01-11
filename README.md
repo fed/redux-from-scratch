@@ -1,5 +1,7 @@
 # Redux Example: Implementing Redux from Scratch
 
+![Redux](http://i.imgur.com/jv2qFX8.jpg?1)
+
 We know that React is just for views (often referred to as the `V` in `MVC`). The obvious question then is, where do I put all my state and logic?
 
 You may already be aware of [Flux](https://facebook.github.io/flux/), which is a style / pattern / architecture for designing web applications. There are several frameworks out there that implement the ideas of Flux, one of them being [Redux](http://redux.js.org/).

@@ -1,0 +1,3 @@
+export const INCREMENT = 'COUNTER/INCREMENT';
+export const DECREMENT = 'COUNTER/DECREMENT';
+export const TOGGLE = 'LOADING/TOGGLE';

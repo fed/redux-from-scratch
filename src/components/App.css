@@ -1,0 +1,14 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: rgb(42, 51, 60);
+  border-top: 7px solid #c12127;
+  padding: 7px;
+  color: #fff;
+}
+
+.App-content {
+  font-size: large;
+}

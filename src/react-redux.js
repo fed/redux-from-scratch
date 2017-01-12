@@ -1,13 +1,10 @@
 import React from 'react';
-import store from './store';
-
-// https://gist.github.com/gaearon/1d19088790e70ac32ea636c025ba424e
 
 export function connect(mapStateToProps, mapDispatchToProps) {
   return function (WrappedComponent) {
-    return class extends React.Component {
+    class ConnectedWrappedComponent extends React.Component {
       componentDidMount() {
-        this.unsubscribe = store.subscribe(this.handleChange.bind(this))
+        this.unsubscribe = this.context.store.subscribe(this.handleChange.bind(this))
       }
 
       componentWillUnmount() {
@@ -22,11 +19,17 @@ export function connect(mapStateToProps, mapDispatchToProps) {
         return (
           <WrappedComponent
             {...this.props}
-            {...mapStateToProps(store.getState(), this.props)}
-            {...mapDispatchToProps(store.dispatch, this.props)} />
+            {...mapStateToProps(this.context.store.getState(), this.props)}
+            {...mapDispatchToProps(this.context.store.dispatch, this.props)} />
         )
       }
     }
+
+    ConnectedWrappedComponent.contextTypes = {
+      store: React.PropTypes.object.isRequired
+    };
+
+    return ConnectedWrappedComponent;
   }
 }
 

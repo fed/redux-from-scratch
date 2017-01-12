@@ -34,6 +34,8 @@ Here's a very brief description of how Redux works when we integrate it to React
 | `yarn run build` | Create a production build |
 | `yarn test` | Run test suite |
 
+This project was bootstrapped using [create-react-app](https://github.com/facebookincubator/create-react-app).
+
 ## License
 
 MIT

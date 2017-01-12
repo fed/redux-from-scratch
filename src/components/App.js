@@ -1,6 +1,7 @@
 import React from 'react';
 import Counter from './Counter';
 import Loading from './Loading';
+import NotConnected from './NotConnected';
 import './App.css';
 
 const App = () => (
@@ -11,6 +12,7 @@ const App = () => (
 
     <Counter />
     <Loading />
+    <NotConnected />
   </section>
 );
 

@@ -1,4 +1,4 @@
-import {combineReducers} from '../redux';
+import {combineReducers} from '../lib/redux';
 import counter from './counter';
 import loading from './loading';
 

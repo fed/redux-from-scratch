@@ -1,6 +1,6 @@
 import React from 'react';
-import {connect} from '../react-redux';
-import {bindActionCreators} from '../redux';
+import {connect} from '../lib/react-redux';
+import {bindActionCreators} from '../lib/redux';
 import {increment, decrement} from '../actions';
 import './Counter.css';
 

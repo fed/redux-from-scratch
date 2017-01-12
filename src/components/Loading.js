@@ -2,12 +2,18 @@ import React from 'react';
 import {connect} from '../react-redux';
 import {bindActionCreators} from '../redux';
 import {toggle as toggleLoading} from '../actions';
+import spinner from './spinner.gif';
 import './Loading.css';
 
 const Loading = ({ loading, toggleLoading }) => (
-  <div>
-    <button onClick={toggleLoading}>Toggle Loading</button>
-    <p className={loading ? 'Loading-visible' : 'Loading-invisible'}>Loading...</p>
+  <div className="Loading">
+    <button className="Loading-button" onClick={toggleLoading}>
+      Toggle Loading
+    </button>
+
+    <div className={loading ? 'Loading-visible' : 'Loading-invisible'}>
+      <img src={spinner} alt="Loading..." />
+    </div>
   </div>
 );
 

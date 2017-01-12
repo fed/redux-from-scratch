@@ -1,18 +1,23 @@
 .Counter {
-  text-align: center;
+  background-color: #fff;
+  border: 1px solid #ebebeb;
+  margin: 30px auto;
+  padding: 15px;
+  width: 500px;
 }
 
 .Counter-count {
-  font-size: 18px;
+  font-size: 28px;
   font-weight: bold;
 }
 
 .Counter-increment,
 .Counter-decrement {
   border: 0;
+  border-radius: 3px;
   color: #fff;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 14px;
   padding: 10px 15px;
 }
 
@@ -26,6 +31,7 @@
 }
 
 .Counter-by {
+  background-color: #fdfdfd;
   border: 1px solid #ebebeb;
   display: block;
   margin: 20px auto;

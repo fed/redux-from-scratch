@@ -1,5 +1,24 @@
+.Loading {
+  background-color: #fff;
+  border: 1px solid #ebebeb;
+  margin: 30px auto;
+  padding: 15px;
+  width: 500px;
+}
+
+.Loading-button {
+  background-color: #00a1f1;
+  border: 0;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 10px 15px;
+}
+
 .Loading-visible {
   display: block;
+  margin: 25px 0 10px;
 }
 
 .Loading-invisible {

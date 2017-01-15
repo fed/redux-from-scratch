@@ -17,7 +17,7 @@ export function createStore(reducer) {
     };
   };
 
-  dispatch({});
+  dispatch({ type: '@@redux/INIT' });
 
   return {
     getState,

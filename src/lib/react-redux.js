@@ -4,23 +4,27 @@ export function connect(mapStateToProps, mapDispatchToProps) {
   return function (WrappedComponent) {
     class ConnectedWrappedComponent extends React.Component {
       componentDidMount() {
-        this.unsubscribe = this.context.store.subscribe(this.handleChange.bind(this))
+        const {subscribe} = this.context.store;
+
+        this.unsubscribe = subscribe(this.handleChange.bind(this));
       }
 
       componentWillUnmount() {
-        this.unsubscribe()
+        this.unsubscribe();
       }
 
       handleChange() {
-        this.forceUpdate()
+        this.forceUpdate();
       }
 
       render() {
+        const {getState, dispatch} = this.context.store;
+
         return (
           <WrappedComponent
             {...this.props}
-            {...mapStateToProps(this.context.store.getState(), this.props)}
-            {...mapDispatchToProps(this.context.store.dispatch, this.props)} />
+            {...mapStateToProps(getState(), this.props)}
+            {...mapDispatchToProps(dispatch, this.props)} />
         )
       }
     }
@@ -30,7 +34,7 @@ export function connect(mapStateToProps, mapDispatchToProps) {
     };
 
     return ConnectedWrappedComponent;
-  }
+  };
 }
 
 export class Provider extends React.Component {
@@ -46,5 +50,5 @@ export class Provider extends React.Component {
 }
 
 Provider.childContextTypes = {
-  store: React.PropTypes.object
+  store: React.PropTypes.object.isRequired
 };

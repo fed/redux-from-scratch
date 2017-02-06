@@ -26,14 +26,11 @@ export function createStore(reducer) {
   };
 };
 
-export function combineReducers (reducers) {
+export function combineReducers(reducers) {
   return (state = {}, action) => {
     return Object.keys(reducers)
 	    .reduce((nextState, key) => {
-        nextState[key] = reducers[key](
-          state[key],
-          action
-        );
+        nextState[key] = reducers[key](state[key], action);
 
         return nextState;
       }, {});
